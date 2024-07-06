@@ -8,11 +8,16 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'r
 
 const MyGridLayout = () => {
   const initialLayout = [
-    { i: 'static', x: 0, y: 1, w: 3, h: 4, static: true }, // Before 'a', aligned with 'b', 'c'
-    { i: 'a', x: 3, y: 1, w: 3, h: 4, minW: 2, maxW: 6 },
-    { i: 'b', x: 6, y: 1, w: 3, h: 4 },
-    { i: 'c', x: 9, y: 1, w: 3, h: 4 },
-    { i: 'graph', x: 0, y: 5, w: 12, h: 6 },
+    { i: 'static', x: 0, y: 0, w: 4, h: 4, static: true },
+    { i: 'a', x: 4, y: 0, w: 4, h: 4, minW: 2, maxW: 6 },
+    { i: 'b', x: 8, y: 0, w: 4, h: 4 },
+    { i: 'c', x: 0, y: 4, w: 4, h: 4 },
+    { i: 'd', x: 4, y: 4, w: 4, h: 4 },
+    { i: 'e', x: 8, y: 4, w: 4, h: 4 },
+    { i: 'f', x: 0, y: 8, w: 4, h: 4 },
+    { i: 'g', x: 4, y: 8, w: 4, h: 4 },
+    { i: 'h', x: 8, y: 8, w: 4, h: 4 },
+    { i: 'graph', x: 0, y: 12, w: 12, h: 6 },
   ];
 
   const [items, setItems] = useState(() => {
@@ -34,7 +39,7 @@ const MyGridLayout = () => {
       i: `item-${items.length + 1}`,
       x: 0,
       y: 0,
-      w: 3,
+      w: 4,
       h: 4,
     };
     setItems([...items, newItem]);
